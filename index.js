@@ -10,7 +10,6 @@ function searchRepositories(){
 }
 
 function getSearchResults(data){
-  console.log(data)
   return data.items.map(item =>
     `
       <div>
@@ -25,14 +24,12 @@ function getSearchResults(data){
 
 function showCommits(item){
   const url = `https://api.github.com/repos/${item.dataset.owner}/${item.dataset.repository}/commits`
-  console.log(url)
   $.get(url, function(response){
     $('#details').html(displayCommits(response))
   }).fail(displayError())
 }
 
 function displayCommits(response){
-  console.log(response)
   return response.map(commit =>
     `
       <div>
