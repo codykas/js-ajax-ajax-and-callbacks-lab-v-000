@@ -29,8 +29,8 @@ function showCommits(item){
   }).fail(displayError())
 }
 
-function displayCommits(response){
-  return response.map(commit =>
+function displayCommits(data){
+  return data.map(commit =>
     `
       <div>
         <h2>${commit.sha}</h2>
