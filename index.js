@@ -9,8 +9,8 @@ function searchRepositories(){
   }).fail(displayError())
 }
 
-function getSearchResults(result){
-  return result.items.map(item =>
+function getSearchResults(data){
+  return data.items.map(item =>
     `
       <div>
         <h2><a href="${item.html_url}">${item.name}</a></h2>
