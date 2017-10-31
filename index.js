@@ -6,8 +6,7 @@ function searchRepositories(){
   const url = `https://api.github.com/search/repositories?q=${term}`
   $.get(url, function(response){
     $('#results').html(getSearchResults(response))
-  }
-).fail(displayError())
+  }).fail(displayError())
 }
 
 function getSearchResults(data){
@@ -29,8 +28,7 @@ function showCommits(item){
   console.log(url)
   $.get(url, function(response){
     $('#details').html(displayCommits(response))
-  }
-).fail(displayError())
+  }).fail(displayError())
 }
 
 function displayCommits(response){
