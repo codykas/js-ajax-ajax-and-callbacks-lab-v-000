@@ -39,5 +39,5 @@ function displayCommits(response){
 }
 
 function displayError(){
-  document.getElementById('errors').innerHTML = "There's been an error. Please try again!"
+  document.getElementById('errors').innerHTML = "There's been an error, please try again."
 }
